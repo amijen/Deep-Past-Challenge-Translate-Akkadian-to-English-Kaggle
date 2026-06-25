@@ -1,7 +1,6 @@
 # Akkadian to English Translation Pipeline
 
 An end-to-end, optimized sequence-to-sequence (Seq2Seq) pipeline for translating ancient Akkadian transliterations into English. This project features aggressive data cleaning, memory-optimized PyTorch datasets, and a custom PyTorch/Transformers training loop.
----
 
 ## 🧠 Architecture Choice: Why ByT5?
 
@@ -11,9 +10,7 @@ Akkadian transliterations do not use standard Latin alphabets. The transcription
 * **Diacritical marks** denoting specific phonemes (e.g., `š`, `ṣ`, `ṭ`, `ḫ`).
 * **Subscript and Index numbers** denoting distinct cuneiform signs that share the same phonetic value (e.g., `u₂`, `e₃`, `xₓ`).
 * **Unicode fractions** used extensively in ancient administrative and economic texts (e.g., `⅓`, `⅔`, `⅚`).
----
 
----
 ## ⚙️ System Architecture
 
 The codebase is structured into a modular, object-oriented pipeline designed for high-throughput processing and stability.
@@ -39,7 +36,6 @@ Designed for competition-scale test sets:
 * **Batched DataLoader**: Feeds data to the GPU in optimized chunks.
 * **`torch.inference_mode()`**: Utilizes modern PyTorch evaluation states to strip out auto-grad overhead.
 * **Beam Search Generation**: Uses `num_beams=4` and KV-caching (`use_cache=True`) to generate high-quality translations efficiently.
----
 
 ## 📂 Project Structure
 
