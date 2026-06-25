@@ -1,0 +1,23 @@
+cat > .gitignore << 'EOF'
+
+# Models & checkpoints
+trained_model/
+improved_model/
+*.ckpt
+*.bin
+*.safetensors
+
+# Environment
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Kaggle / Logs
+.kaggle/
+*.log
+wandb/
+EOF
+
+git add .gitignore
+git commit -m "chore: add gitignore for data, models and env"
