@@ -1,4 +1,8 @@
 cat > .gitignore << 'EOF'
+# Ignore everything IN data, but keep the folder
+data/dpc_data/*
+!data/dpc_data/.gitkeep
+*.csv
 
 # Models & checkpoints
 trained_model/
